@@ -11,6 +11,7 @@ import SwiftyUserDefaults
 
 extension DefaultsKeys {
     static let todaysStatus = DefaultsKey<Int>("todaysStatus")
+    static let statusHistory = DefaultsKey<[[Date: Int]]>("statusHistory")
 }
 
 

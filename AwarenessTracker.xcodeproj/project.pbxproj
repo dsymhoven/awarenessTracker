@@ -15,6 +15,7 @@
 		2E9A18B121254E6500212D1A /* AwarenessTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9A18B021254E6500212D1A /* AwarenessTrackerTests.swift */; };
 		2E9A18BC21254F2000212D1A /* CurrentStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9A18BB21254F2000212D1A /* CurrentStatusViewController.swift */; };
 		2E9A18BE21254FC500212D1A /* PersitenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9A18BD21254FC500212D1A /* PersitenceManager.swift */; };
+		2EA29E922127FD58009BD350 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2EA29E912127FD58009BD350 /* GoogleService-Info.plist */; };
 		51459451F7B1D959C1E74E0B /* Pods_AwarenessTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E5B551AE139DB117AA7613 /* Pods_AwarenessTrackerTests.framework */; };
 		A81B4A704D1121E3099EB953 /* Pods_AwarenessTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83901BE7B8229138FEB9317F /* Pods_AwarenessTracker.framework */; };
 /* End PBXBuildFile section */
@@ -43,6 +44,7 @@
 		2E9A18B221254E6500212D1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E9A18BB21254F2000212D1A /* CurrentStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentStatusViewController.swift; sourceTree = "<group>"; };
 		2E9A18BD21254FC500212D1A /* PersitenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersitenceManager.swift; sourceTree = "<group>"; };
+		2EA29E912127FD58009BD350 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4628B346E038CA8BF83A55D6 /* Pods-AwarenessTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwarenessTrackerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AwarenessTrackerTests/Pods-AwarenessTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5410FD81A4FDCA3EA80E5FC5 /* Pods-AwarenessTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwarenessTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AwarenessTracker/Pods-AwarenessTracker.debug.xcconfig"; sourceTree = "<group>"; };
 		83901BE7B8229138FEB9317F /* Pods_AwarenessTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AwarenessTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +100,7 @@
 				2E9A18A221254E6400212D1A /* Assets.xcassets */,
 				2E9A18A421254E6400212D1A /* LaunchScreen.storyboard */,
 				2E9A18A721254E6400212D1A /* Info.plist */,
+				2EA29E912127FD58009BD350 /* GoogleService-Info.plist */,
 				2E9A18BB21254F2000212D1A /* CurrentStatusViewController.swift */,
 				2E9A18BD21254FC500212D1A /* PersitenceManager.swift */,
 				2E62396621255357009DE048 /* Constants.swift */,
@@ -219,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E9A18A621254E6400212D1A /* LaunchScreen.storyboard in Resources */,
+				2EA29E922127FD58009BD350 /* GoogleService-Info.plist in Resources */,
 				2E9A18A321254E6400212D1A /* Assets.xcassets in Resources */,
 				2E9A18A121254E6300212D1A /* Main.storyboard in Resources */,
 			);
@@ -259,11 +263,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-AwarenessTracker/Pods-AwarenessTracker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -462,6 +474,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EL5N6YFFYG;
 				INFOPLIST_FILE = AwarenessTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -481,6 +494,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EL5N6YFFYG;
 				INFOPLIST_FILE = AwarenessTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

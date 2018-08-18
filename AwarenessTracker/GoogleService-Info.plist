@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>592307376391-faluh5al9grohkl0rp2e40b5o42m2h35.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.592307376391-faluh5al9grohkl0rp2e40b5o42m2h35</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBvGAa6TNw9VELJICKrJCWokMrUVRoOPzg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>592307376391</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>de.liveit.AwarenessTracker</string>
+	<key>PROJECT_ID</key>
+	<string>awarenesstracker</string>
+	<key>STORAGE_BUCKET</key>
+	<string>awarenesstracker.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:592307376391:ios:ba3787ed97271ab2</string>
+	<key>DATABASE_URL</key>
+	<string>https://awarenesstracker.firebaseio.com</string>
+</dict>
+</plist>

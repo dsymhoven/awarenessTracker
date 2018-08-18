@@ -8,13 +8,19 @@
 
 import Foundation
 import SwiftyUserDefaults
+import FirebaseDatabase
 
 class PersistenceManager {
+    
     static func save(todaysStatus: Int) {
         Defaults[.todaysStatus] = todaysStatus
     }
     
     static func getTodaysStatus() -> Int {
+        let reference = Database.database().reference()
+        reference.observe(.value) { (snapshot) in
+            log.debug(snapshot)
+        }
         return Defaults[.todaysStatus]
     }
     
