@@ -16,6 +16,7 @@
 		2E9A18BC21254F2000212D1A /* CurrentStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9A18BB21254F2000212D1A /* CurrentStatusViewController.swift */; };
 		2E9A18BE21254FC500212D1A /* PersitenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9A18BD21254FC500212D1A /* PersitenceManager.swift */; };
 		2EA29E922127FD58009BD350 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2EA29E912127FD58009BD350 /* GoogleService-Info.plist */; };
+		2EB79D62212805C100302C9F /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB79D61212805C100302C9F /* Status.swift */; };
 		51459451F7B1D959C1E74E0B /* Pods_AwarenessTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E5B551AE139DB117AA7613 /* Pods_AwarenessTrackerTests.framework */; };
 		A81B4A704D1121E3099EB953 /* Pods_AwarenessTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83901BE7B8229138FEB9317F /* Pods_AwarenessTracker.framework */; };
 /* End PBXBuildFile section */
@@ -45,6 +46,7 @@
 		2E9A18BB21254F2000212D1A /* CurrentStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentStatusViewController.swift; sourceTree = "<group>"; };
 		2E9A18BD21254FC500212D1A /* PersitenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersitenceManager.swift; sourceTree = "<group>"; };
 		2EA29E912127FD58009BD350 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2EB79D61212805C100302C9F /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		4628B346E038CA8BF83A55D6 /* Pods-AwarenessTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwarenessTrackerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AwarenessTrackerTests/Pods-AwarenessTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5410FD81A4FDCA3EA80E5FC5 /* Pods-AwarenessTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwarenessTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AwarenessTracker/Pods-AwarenessTracker.debug.xcconfig"; sourceTree = "<group>"; };
 		83901BE7B8229138FEB9317F /* Pods_AwarenessTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AwarenessTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,15 +97,15 @@
 		2E9A189A21254E6300212D1A /* AwarenessTracker */ = {
 			isa = PBXGroup;
 			children = (
+				2EB79D60212805A600302C9F /* Helper */,
+				2EB79D5F2128058C00302C9F /* ViewControllers */,
+				2EB79D5E2128057F00302C9F /* Model */,
 				2E9A189B21254E6300212D1A /* AppDelegate.swift */,
 				2E9A189F21254E6300212D1A /* Main.storyboard */,
 				2E9A18A221254E6400212D1A /* Assets.xcassets */,
 				2E9A18A421254E6400212D1A /* LaunchScreen.storyboard */,
 				2E9A18A721254E6400212D1A /* Info.plist */,
 				2EA29E912127FD58009BD350 /* GoogleService-Info.plist */,
-				2E9A18BB21254F2000212D1A /* CurrentStatusViewController.swift */,
-				2E9A18BD21254FC500212D1A /* PersitenceManager.swift */,
-				2E62396621255357009DE048 /* Constants.swift */,
 			);
 			path = AwarenessTracker;
 			sourceTree = "<group>";
@@ -115,6 +117,31 @@
 				2E9A18B221254E6500212D1A /* Info.plist */,
 			);
 			path = AwarenessTrackerTests;
+			sourceTree = "<group>";
+		};
+		2EB79D5E2128057F00302C9F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2EB79D61212805C100302C9F /* Status.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2EB79D5F2128058C00302C9F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2E9A18BB21254F2000212D1A /* CurrentStatusViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2EB79D60212805A600302C9F /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				2E9A18BD21254FC500212D1A /* PersitenceManager.swift */,
+				2E62396621255357009DE048 /* Constants.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		6EA1B93182ACE721E8F0C935 /* Frameworks */ = {
@@ -308,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E9A18BC21254F2000212D1A /* CurrentStatusViewController.swift in Sources */,
+				2EB79D62212805C100302C9F /* Status.swift in Sources */,
 				2E9A18BE21254FC500212D1A /* PersitenceManager.swift in Sources */,
 				2E9A189C21254E6300212D1A /* AppDelegate.swift in Sources */,
 				2E62396721255357009DE048 /* Constants.swift in Sources */,

@@ -10,14 +10,17 @@ import UIKit
 
 class CurrentStatusViewController: UIViewController {
 
+    // MARK:- Properties
+    private var status = 0
+    
     // MARK:- Outlets
     @IBOutlet weak var currentStatusLabel: UILabel!
     
     // MARK:- Actions
     @IBAction func awarenessButtonPressed(_ sender: UIButton) {
-        let todaysStatus = PersistenceManager.getTodaysStatus()
-        PersistenceManager.save(todaysStatus: todaysStatus + 1)
-        updateStatusLabel()
+    
+        PersistenceManager.save(todaysStatus: status + 1)
+        
     }
     
     @IBAction func resetButtonPressed(_ sender: UIButton) {
@@ -48,6 +51,13 @@ class CurrentStatusViewController: UIViewController {
     }
     
     @objc private func updateStatusLabel() {
-        currentStatusLabel.text = "\(PersistenceManager.getTodaysStatus())"
+        PersistenceManager.getTodaysStatus(completion: { [weak self] (success, amount, error) in
+            guard let amount = amount else {
+                log.warning("no status found for today")
+                return
+            }
+            self?.status = amount
+            self?.currentStatusLabel.text = "\(amount)"
+        })
     }
 }

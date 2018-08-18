@@ -49,8 +49,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
         
-        let todaysStatus = PersistenceManager.getTodaysStatus()
-        PersistenceManager.save(todaysStatus: todaysStatus + 1)
+//        let todaysStatus = PersistenceManager.getTodaysStatus()
+//        PersistenceManager.save(todaysStatus: todaysStatus + 1)
         completionHandler(true)
     }
 
