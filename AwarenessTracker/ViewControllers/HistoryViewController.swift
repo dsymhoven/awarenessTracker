@@ -33,6 +33,7 @@ class HistoryViewController: UIViewController {
     }
 }
 
+// MARK:- Extensions
 extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -47,7 +48,7 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryCellIdentifier", for: indexPath) as! HistoryTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.historyCellIdentifier, for: indexPath) as! HistoryTableViewCell
         guard let history = history else {
             log.warning("history not set yet in \(#function)")
             return UITableViewCell(style: .default, reuseIdentifier: nil)

@@ -14,4 +14,8 @@ extension DefaultsKeys {
     static let statusHistory = DefaultsKey<[[Date: Int]]>("statusHistory")
 }
 
+struct CellIdentifiers {
+    static let historyCellIdentifier = "HistoryCellIdentifier"
+}
+
 

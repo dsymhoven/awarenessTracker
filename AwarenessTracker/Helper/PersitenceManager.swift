@@ -53,6 +53,7 @@ class PersistenceManager {
         let reference = Database.database().reference()
         reference.observe(.value) { (snapshot) in
             log.debug("Fetching history... Received snapshot: \(snapshot)")
+            history.removeAll()
             for child in snapshot.children {
                 if let childsnapshot = child as? DataSnapshot, let status = Status(with: childsnapshot) {
                     history.append(status)

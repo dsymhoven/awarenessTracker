@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Current Status View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CurrentStatusViewController" customModule="AwarenessTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -44,7 +44,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="qSV-gv-Deh"/>
+                    <tabBarItem key="tabBarItem" systemItem="mostRecent" id="qSV-gv-Deh"/>
                     <connections>
                         <outlet property="currentStatusLabel" destination="ksY-23-hw8" id="c2J-8e-CYM"/>
                     </connections>
@@ -53,7 +53,7 @@
             </objects>
             <point key="canvasLocation" x="1076" y="94.902548725637189"/>
         </scene>
-        <!--Item-->
+        <!--History View Controller-->
         <scene sceneID="lic-1s-lWF">
             <objects>
                 <viewController id="BNh-uN-dM7" customClass="HistoryViewController" customModule="AwarenessTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -113,7 +113,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nzS-2z-KC9"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Uaj-GA-Y8T"/>
+                    <tabBarItem key="tabBarItem" systemItem="history" id="Uaj-GA-Y8T"/>
                     <connections>
                         <outlet property="historyTableView" destination="mJz-1c-z0z" id="yZf-Du-10I"/>
                     </connections>
@@ -128,6 +128,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="xMb-f6-OLb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RvS-pf-ck8">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
