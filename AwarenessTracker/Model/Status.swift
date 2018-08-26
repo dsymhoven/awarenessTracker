@@ -16,6 +16,7 @@ struct Status {
     }
 
     let amount: Int?
+    let timestamp: String?
     
     init?(with snapshot: DataSnapshot) {
         
@@ -23,11 +24,15 @@ struct Status {
             log.error("can not initialize Status object with snapshot")
             return nil
         }
+        
+        timestamp = snapshot.key
         amount = Int(jsonData: dict[JSONKeys.amount])
     }
     
-    init(timestamp: Int64, amount: Int) {
+    init(timestamp: String, amount: Int) {
         self.amount = amount
+        // TO DO: not type safe. Fix this
+        self.timestamp = timestamp
     }
 }
 

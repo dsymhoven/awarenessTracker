@@ -18,14 +18,11 @@ class CurrentStatusViewController: UIViewController {
     
     // MARK:- Actions
     @IBAction func awarenessButtonPressed(_ sender: UIButton) {
-    
         PersistenceManager.save(todaysStatus: status + 1)
-        
     }
     
     @IBAction func resetButtonPressed(_ sender: UIButton) {
-        PersistenceManager.deleteTodaysStatus()
-        updateStatusLabel()
+        PersistenceManager.save(todaysStatus: 0)
     }
     
     // MARK:- Life Cycle

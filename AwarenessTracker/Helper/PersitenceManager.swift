@@ -12,6 +12,8 @@ import FirebaseDatabase
 
 class PersistenceManager {
     
+    static var status: Int?
+    
     private static func todayDateString() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
@@ -28,12 +30,13 @@ class PersistenceManager {
     
     static func getTodaysStatus(completion: @escaping (Bool, Int?, Error?) -> Void) {
         let reference = Database.database().reference()
-        reference.observe(.value) { (snapshot) in
+        reference.observe(.value) {(snapshot) in
             for child in snapshot.children {
                 if let childsnapshot = child as? DataSnapshot,
                     todayDateString() == childsnapshot.key,
                     let amount = childsnapshot.childSnapshot(forPath: "amount").value as? Int
                     {
+                        status = amount
                         completion(true, amount, nil)
                 }
             }
